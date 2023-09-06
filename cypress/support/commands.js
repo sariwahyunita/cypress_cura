@@ -1,25 +1,39 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//fucntion
+Cypress.Commands.add('inputLogin', (username, password) => { 
+    if (username == null) {
+        cy.get('#txt-username').should('be.visible').clear()
+    } else {
+        cy.get('#txt-username').should('be.visible').clear().type(username)
+    }
+
+    if (password == null) {
+        cy.get('#txt-password').should('be.visible').clear()
+    } else {
+        cy.get('#txt-password').should('be.visible').clear().type(password)
+    }
+    
+    cy.get('#btn-login')
+    .should('be.visible')
+    .click()
+})
+
+//action
+Cypress.Commands.add('klik', (locator) => { 
+    cy.get(locator)
+    .should('be.visible')
+    .click()
+})
+
+
+//verify
+Cypress.Commands.add('verifyContains', (wording) => { 
+    cy.contains(wording)
+    .should('be.visible')
+})
+
+Cypress.Commands.add('verifyUrlContains', (url) => { 
+    cy.url()
+    .should('include', url)
+})

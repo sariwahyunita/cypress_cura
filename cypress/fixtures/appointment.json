@@ -1,0 +1,24 @@
+[
+    {
+        "facility": "Tokyo CURA Healthcare Center",
+        "apply": true,
+        "healthcareProgram": "Medicare",
+        "visitDate": "19/09/2023",
+        "comment":"comment"
+    },
+    {
+        "facility": "Hongkong CURA Healthcare Center",
+        "apply": false,
+        "healthcareProgram": "Medicaid",
+        "visitDate": "19/09/2023",
+        "comment":"comment"
+    },
+    {
+        "facility": "Seoul CURA Healthcare Center",
+        "apply": true,
+        "healthcareProgram": "None",
+        "visitDate": "19/09/2023",
+        "comment":"comment"
+    }
+]
+  

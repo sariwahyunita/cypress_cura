@@ -33,6 +33,12 @@ Cypress.Commands.add('verifyContains', (wording) => {
     .should('be.visible')
 })
 
+Cypress.Commands.add('verifyContainsByLocator', (locator, wording) => { 
+    cy.get(locator)
+    .should('be.visible')
+    .should('have.text', wording)
+})
+
 Cypress.Commands.add('verifyUrlContains', (url) => { 
     cy.url()
     .should('include', url)

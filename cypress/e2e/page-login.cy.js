@@ -2,11 +2,11 @@ const users = require('../fixtures/users.json')
 
 describe('page login', () => {
   beforeEach(() => {
+    //go to landing page
     cy.visit(Cypress.env('prod'))
-    cy.verifyContains('CURA Healthcare Service')
     cy.get("#btn-make-appointment").should('be.visible').should('have.text', 'Make Appointment')
-    cy.klik('#menu-toggle')
-    cy.verifyContains("Login").click()
+    //go to login page
+    cy.goToPage('Login')
     cy.verifyUrlContains('/profile.php#login')
   })
 

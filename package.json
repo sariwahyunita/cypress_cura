@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "login": "npx cypress run --browser chrome --spec 'cypress/e2e/page-login.cy.js'",
-    "appoiment": "npx cypress run --browser chrome --spec 'cypress/e2e/page-appoiment.cy.js'"
+    "appoiment": "npx cypress run --browser chrome --spec 'cypress/e2e/page-appoiment.cy.js'",
+    "history": "npx cypress run --browser chrome --spec 'cypress/e2e/page-history.cy.js'",
+    "regression": "npx cypress run --browser chrome --spec 'cypress/e2e/*'"
   },
   "author": "",
   "license": "ISC",

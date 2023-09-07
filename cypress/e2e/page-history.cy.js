@@ -18,7 +18,7 @@ describe('page hitory', () => {
     cy.verifyContains("No appointment.")
   })
 
-  it.only('user success view history with any data', () => {    
+  it('user success view history with any data', () => {
     let data = {
       "facility": appoiments[0].facility,
       "apply": appoiments[0].apply,

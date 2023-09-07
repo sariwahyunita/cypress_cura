@@ -13,7 +13,7 @@ describe('page appoinment', () => {
     cy.verifyUrlContains('/#appointment')
   })
 
-  it.only('user success make appoiment', () => {
+  it('user success make appoiment', () => {
     for(let appoiment = 0; appoiment <= 2; appoiment++){
       let data = {
         "facility": appoiments[appoiment].facility,

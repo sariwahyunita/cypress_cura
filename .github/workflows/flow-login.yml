@@ -12,4 +12,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          spec: cypress\e2e\page-login.cy.js
+          spec: cypress/e2e/page-login.cy.js

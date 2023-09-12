@@ -1,8 +1,8 @@
-name: End-to-end login
+name: End-to-end history
 on: 
   push:
     paths:
-      - cypress/e2e/page-login.cy.js
+      - cypress/e2e/page-history.cy.js
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
@@ -11,8 +11,8 @@ jobs:
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run login
+      - name: Cypress run history
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          spec: cypress/e2e/page-login.cy.js
+          spec: cypress/e2e/page-history.cy.js
